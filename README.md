@@ -9,6 +9,6 @@ local packed = s.pack({"player", health=100, color={1,.05,0}})
 
 print(packed)
 print(s.unpack(packed).health)
--- {"player",health=100,color={1,0.05,0}}
+-- {[1]="player",health=100,color={[1]=1,[2]=0.05,[3]=0}}
 -- 100
 ```
