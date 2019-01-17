@@ -5,15 +5,17 @@ Simple packing of tables into strings for storage or networking that can be unpa
 ```lua
 s = require 'serialize'
 
-local player = {"player", health=100, color={1,.05,0}}
-player[3] = "key3"
+player = {"hank", color={1,.05,0}}
+player.health = 84
+player[2] = "key2"
 player[4] = "key4"
 
-local packed = s.pack(player)
+packed = s.pack(player)
+unpacked = s.unpack(packed)
 
 print(packed)
--- {"player",[3]="key3","key4",health=100,color={1,0.05,0}}
+-- {"hank","key2",[4]="key4",health=84,color={1,0.05,0}}
 
-print(s.unpack(packed).health)
--- 100
+print(unpacked.health)
+-- 84
 ```
