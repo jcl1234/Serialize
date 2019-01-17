@@ -12,7 +12,8 @@ player[4] = "key4"
 local packed = s.pack(player)
 
 print(packed)
-print(s.unpack(packed).health)
 -- {"player",[3]="key3","key4",health=100,color={1,0.05,0}}
+
+print(s.unpack(packed).health)
 -- 100
 ```
