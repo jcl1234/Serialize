@@ -27,7 +27,6 @@ function serialize.pack(t)
 					lastNumKey = k
 				else
 					keyStr = "["..k.."]="
-					lastNumKey = k
 				end
 			end
 
